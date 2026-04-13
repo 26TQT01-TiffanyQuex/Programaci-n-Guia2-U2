@@ -1,0 +1,107 @@
+﻿using Microsoft.VisualBasic;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        char long1, long2;
+        double num, convercion;
+        Console.WriteLine("++++CONVERSOR DE LONGITUD++++");
+        Console.WriteLine("                             ");
+        Console.WriteLine("Escriba la medida actual");
+        Console.WriteLine("	a) Metros");
+        Console.WriteLine("	b) Pies");
+        Console.WriteLine(" c) Centímetros");
+        Console.WriteLine(" d) Pulgadas");
+        Console.WriteLine("");
+        long1 = Convert.ToChar(Console.ReadLine());
+        Console.WriteLine("Escoja la medida a convertir");
+        Console.WriteLine("	a) Metros");
+        Console.WriteLine("	b) Pies");
+        Console.WriteLine("	c) Centímetros");
+        Console.WriteLine("	d) Pulgadas");
+        long2 = Convert.ToChar(Console.ReadLine());
+        Console.WriteLine("Escriba en dígitos la primera medida");
+        num = double.Parse(Console.ReadLine());
+        switch (long1)
+        {
+            case 'a':
+                switch (long2)
+                {
+                    case 'b':
+                        convercion = num * 3.28;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'c':
+                        convercion = num * 100;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'd':
+                        convercion = num * 39.7;
+                        Console.WriteLine("" + convercion);
+                        break;
+                }
+                break;
+            case 'b':      
+                switch (long2)
+                {
+                    case 'a':
+                        convercion = num / 3.28;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'c':
+                        convercion = num * 30.48;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'd':
+                        convercion = num * 12;
+                        Console.WriteLine("" + convercion);
+                        break;
+                }
+                break;
+            case 'c':
+                switch (long2)
+                {
+                    case 'a':
+                        convercion = num / 100;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'b':
+                        convercion = num / 30.48;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'd':
+                        convercion = num / 2.54;
+                        Console.WriteLine("" + convercion);
+                        break;
+                }
+                break;
+            case 'd':
+                switch (long2)
+                {
+                    case 'a':
+                        convercion = num / 39.37;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'b':
+                        convercion = num / 30.48;
+                        Console.WriteLine("" + convercion);
+                        break;
+
+                    case 'c':
+                        convercion = num * 2.54;
+                        Console.WriteLine("" + convercion);
+                        break;
+                }
+                break;
+            default: Console.WriteLine("opción inválida"); break;
+        }
+    }
+}
