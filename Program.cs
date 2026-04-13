@@ -1,0 +1,36 @@
+﻿internal class Program
+{
+    private static void Main(string[] args)
+    {
+        char nota;
+        Console.WriteLine("Ingrese una letra de la A-F en mayúscula");
+        nota = Convert.ToChar(Console.ReadLine());
+        switch (nota)
+        {
+            case 'A':
+                Console.WriteLine("Excelente");
+            break;
+
+            case 'B':
+                Console.WriteLine("Bueno");
+            break;
+
+            case 'C':
+                Console.WriteLine("Regular");
+                break;
+
+            case 'D':
+                Console.WriteLine("Deficiente");
+                break;
+
+            case 'F':
+                Console.WriteLine("Reprobado");
+                break;
+
+            default:
+                Console.WriteLine("Letra no válida");
+                break;
+
+        }
+    }
+}
